@@ -10,7 +10,35 @@ var loop = function(collection, callback){
 
 // 1. countVowels
 
+var countVowels = function(string){
+	var counter = 0;
+	var vowels = ["a", "e", "i", "o", "u"];
+	loop(string, function(letter){
+		if (vowels.indexOf(letter) >= 0){
+			counter++;
+		}
+	})
+		return counter;	
+		}
+	
+var numOfVowels = countVowels("All vowels");
+console.log(numOfVowels);	
+
 // 2. stringReversal
+
+var stringReversal = function(string){
+	var reversestring = "";
+	var long = string.length;
+	for (var i = 1; i < (long + 1); i++){
+		reversestring += string[long - i];
+
+	}
+
+		return reversestring;
+
+}
+var olleh = stringReversal("hello");
+console.log(olleh);
 
 // 3. isPalindrome
 
